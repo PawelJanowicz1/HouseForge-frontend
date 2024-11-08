@@ -160,6 +160,17 @@ button {
 
 .title {
   font-size: 4rem;
-  color: #333;
+  font-weight: bold;
+  background: linear-gradient(to right, #f1baab, #cd4b4b);
+  -webkit-background-clip: text;
+  color: transparent;
   animation: fadeIn 2s ease-in-out;
+}
+
+.title mat-icon {
+  padding-right: 53px;
+  padding-bottom: 57px;
+  font-size: 80px;
+  background: linear-gradient(to right, #f6a28a, #ef4f26);
+  -webkit-background-clip: text;
 }
