@@ -1,19 +1,32 @@
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 .navbar-custom {
   display: flex;
   gap: 20px;
   border:none;
   background: none;
+  animation: slideDown 1s ease-out;
 }
 
 .navbar-custom button {
-  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  background: linear-gradient(45deg, #f1cbcb, #fa4e25);
   color: white;
   border: none;
   font-weight: bold;
-  transition: transform 0.2s ease-in-out;
+  background-size: 200% 200%;
+  animation: gradient-pulse 3s ease infinite;
 }
 
-.navbar-custom button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+@keyframes gradient-pulse {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

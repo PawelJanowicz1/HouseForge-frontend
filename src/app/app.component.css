@@ -147,6 +147,7 @@ button {
   height: 100%;
   object-fit: fill;
   z-index: -1;
+  filter: blur(3px);
 }
 
 @keyframes fadeIn {
@@ -173,4 +174,105 @@ button {
   font-size: 80px;
   background: linear-gradient(to right, #f6a28a, #ef4f26);
   -webkit-background-clip: text;
+}
+
+.welcome-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.animated-text {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  opacity: 0;
+  margin: 10px 0;
+}
+
+.slide-in-left {
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+  transform: translateX(100%);
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation-delay: 0.5s;
+}
+
+.slide-in-right {
+  animation-delay: 1.5s;
+}
+
+.slide-in-left:nth-of-type(3) {
+  animation-delay: 2.5s;
+}
+
+@keyframes text-color-shift {
+  0% {
+    color: #f6a28a;
+  }
+  25% {
+    color: #ff6347;
+  }
+  50% {
+    color: #ff8c00;
+  }
+  75% {
+    color: #e74c3c;
+  }
+  100% {
+    color: #f6a28a;
+  }
+}
+
+.highlighted-word {
+  font-size: 4.0rem;
+  font-weight: bold;
+  font-family: 'sans-serif', "Roboto";
+  background: linear-gradient(to right, #f6a28a, #ef4f26);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: slideInFromRight 1s ease-out forwards, text-color-shift 6s ease-in-out infinite;
+  animation-delay: 3.5s;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.welcome-section h2:last-child {
+  margin-bottom: 20px;
+}
+
+.main-page-color{
+  color: #f16d49;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1.animated-text {
+  line-height: 1.5;
 }
