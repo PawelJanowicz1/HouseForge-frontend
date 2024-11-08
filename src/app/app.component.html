@@ -1,36 +1,17 @@
+<video autoplay loop muted id="background-video">
+  <source src="/videos/background-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 <header class="header">
-  <div class="container">
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">O nas</a></li>
-        <li><a href="#pricing">Cennik</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
+  <div class="logo">
+    <img src="/images/logo.png" alt="logo"/>
   </div>
+  <app-navbar class="navbar"></app-navbar>
 </header>
 
 <main>
-  <section id="about" class="about-section">
-    <div class="container">
-      <h1>Witaj na HouseForge</h1>
-      <p>Tworzymy najlepsze domy, wykorzystując nowoczesne technologie.</p>
-    </div>
-  </section>
 
-  <section id="pricing" class="pricing-section">
-    <div class="container">
-      <h2>Cennik</h2>
-      <app-pricing></app-pricing>
-    </div>
-  </section>
-
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Skontaktuj się z nami</h2>
-      <app-send-message-form></app-send-message-form>
-    </div>
-  </section>
 </main>
 
 <footer class="footer">
