@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import * as path from 'node:path';
 import {AboutComponent} from './about/about.component';
 import {SendMessageFormComponent} from './contact/send-message-form.component';
 import {NavbarComponent} from './navbar/navbar.component';

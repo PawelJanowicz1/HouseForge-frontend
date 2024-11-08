@@ -1,10 +1,15 @@
+<router-outlet xmlns="http://www.w3.org/1999/html"></router-outlet>
 <video autoplay loop muted id="background-video">
   <source src="/videos/background-video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 <header class="header">
-  <h1 class="title"><mat-icon>house</mat-icon>HOUSE FORGE</h1>
+  <h1 class="title">
+    <a routerLink="/" class="no-link-style">
+      <mat-icon>house</mat-icon> HOUSE FORGE
+    </a>
+  </h1>
   <app-navbar class="navbar"></app-navbar>
 </header>
 
