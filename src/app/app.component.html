@@ -1,19 +1,20 @@
 <router-outlet xmlns="http://www.w3.org/1999/html"></router-outlet>
+
 <video autoplay loop muted id="background-video">
   <source src="/videos/background-video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-<header class="header">
+<header *ngIf="showHeaderAndFooter" class="header">
   <h1 class="title">
     <a routerLink="/" class="no-link-style">
       <mat-icon>house</mat-icon> HOUSE FORGE
     </a>
   </h1>
-  <app-navbar class="navbar"></app-navbar>
+  <app-navbar [currentRoute]="currentRoute" class="navbar"></app-navbar>
 </header>
 
-<main>
+<main *ngIf="showHeaderAndFooter">
   <section class="welcome-section">
     <h2 class="main-page-color animated-text slide-in-left">Budujemy domy</h2>
     <h2 class="main-page-color animated-text slide-in-right">dla naszych klientów</h2>
@@ -22,7 +23,7 @@
   </section>
 </main>
 
-<footer class="footer">
+<footer *ngIf="showHeaderAndFooter" class="footer">
   <div class="container">
     <p>&copy; 2024 HouseForge. Wszystkie prawa zastrzeżone.</p>
   </div>

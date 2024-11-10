@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {MatToolbar} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
 import {MatButton} from '@angular/material/button';
@@ -17,5 +17,9 @@ import {RouterLink} from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  @Input() currentRoute: string = '';
 
+  isButtonHidden(buttonRoute: string): boolean {
+    return this.currentRoute === buttonRoute;
+  }
 }
