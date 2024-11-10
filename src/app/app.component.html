@@ -5,7 +5,7 @@
   Your browser does not support the video tag.
 </video>
 
-<header *ngIf="showHeaderAndFooter" class="header">
+<header class="header">
   <h1 class="title">
     <a routerLink="/" class="no-link-style">
       <mat-icon>house</mat-icon> HOUSE FORGE
@@ -14,8 +14,8 @@
   <app-navbar [currentRoute]="currentRoute" class="navbar"></app-navbar>
 </header>
 
-<main *ngIf="showHeaderAndFooter">
-  <section class="welcome-section">
+<main>
+  <section *ngIf="currentRoute !== '/about'" class="welcome-section">
     <h2 class="main-page-color animated-text slide-in-left">Budujemy domy</h2>
     <h2 class="main-page-color animated-text slide-in-right">dla naszych klientów</h2>
     <h2 class="main-page-color animated-text slide-in-left">na terenie całego</h2>
@@ -23,7 +23,7 @@
   </section>
 </main>
 
-<footer *ngIf="showHeaderAndFooter" class="footer">
+<footer class="footer">
   <div class="container">
     <p>&copy; 2024 HouseForge. Wszystkie prawa zastrzeżone.</p>
   </div>
