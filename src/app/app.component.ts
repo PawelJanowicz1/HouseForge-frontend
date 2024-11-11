@@ -31,7 +31,7 @@ export class AppComponent {
       document.body.style.backgroundImage = 'url("/images/white-paper3.jpg")';
       document.body.style.backgroundSize = 'cover';
       document.body.style.backgroundPosition = 'center';
-    } else if( this.currentRoute === 'contact'){
+    } else if( this.currentRoute === '/contact'){
       document.body.style.backgroundImage = 'url("/images/white-paper3.jpg")';
       document.body.style.backgroundSize = 'cover';
       document.body.style.backgroundPosition = 'center';

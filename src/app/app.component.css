@@ -162,7 +162,7 @@ button {
 .title {
   font-size: 4rem;
   font-weight: bold;
-  background: linear-gradient(to right, #f1baab, #cd4b4b);
+  background: linear-gradient(to right, #f6967b, #cf4949);
   -webkit-background-clip: text;
   color: transparent;
   animation: fadeIn 2s ease-in-out;

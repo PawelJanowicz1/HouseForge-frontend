@@ -3,6 +3,7 @@ import {MatToolbar} from '@angular/material/toolbar';
 import {MatIcon} from '@angular/material/icon';
 import {MatButton} from '@angular/material/button';
 import {RouterLink} from '@angular/router';
+import {NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,8 @@ import {RouterLink} from '@angular/router';
     MatToolbar,
     MatIcon,
     MatButton,
-    RouterLink
+    RouterLink,
+    NgClass
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
@@ -19,7 +21,7 @@ import {RouterLink} from '@angular/router';
 export class NavbarComponent {
   @Input() currentRoute: string = '';
 
-  isButtonHidden(buttonRoute: string): boolean {
+  isButtonActive(buttonRoute: string): boolean {
     return this.currentRoute === buttonRoute;
   }
 }

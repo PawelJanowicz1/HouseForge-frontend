@@ -7,7 +7,6 @@
   }
 }
 
-
 .navbar-custom {
   display: flex;
   gap: 20px;
@@ -29,4 +28,11 @@
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.navbar-custom button.active {
+  background: linear-gradient(45deg, #f1cbcb, #232323);
+  color: white;
+  font-weight: bold;
+  transform: scale(1.1);
 }
