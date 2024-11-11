@@ -64,3 +64,35 @@
 .styled-image:hover {
   transform: scale(1.05);
 }
+
+.slide-in-left {
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.slide-in-right {
+  transform: translateX(100%);
+  animation: slideInFromRight 1s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
