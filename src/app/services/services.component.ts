@@ -1,30 +1,38 @@
 import { Component } from '@angular/core';
 import {MatCard, MatCardContent} from '@angular/material/card';
+import {CommonModule, NgClass} from '@angular/common';
 
 @Component({
   selector: 'app-services',
   standalone: true,
   imports: [
+    CommonModule,
     MatCard,
-    MatCardContent
+    MatCardContent,
+    NgClass
   ],
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
 export class ServicesComponent {
-  ourServices: string = 'Oferujemy:';
-  servicesList: string = `
-    <ul class="services-list">
-      <li><strong>Budowa domów na zamówienie</strong></li>
-      <li><strong>Projektowanie i doradztwo</strong></li>
-      <li><strong>Budowa domów energooszczędnych i pasywnych</strong></li>
-      <li><strong>Prace ziemne i fundamentowe</strong></li>
-      <li><strong>Instalacje sanitarne, elektryczne i grzewcze</strong></li>
-      <li><strong>Wykończenia wnętrz</strong></li>
-      <li><strong>Remonty i modernizacje</strong></li>
-      <li><strong>Nadzór budowlany i doradztwo prawne</strong></li>
-      <li><strong>Budynek pod klucz</strong></li>
-      <li><strong>Ekologiczne rozwiązania budowlane</strong></li>
-    </ul>
-  `;
+  ourServices: string = 'Co oferujemy?';
+  servicesList: any[] = [
+    {
+      title: 'Budowa domów na zamówienie',
+      description: 'Kompleksowa budowa domów jednorodzinnych, realizacja projektów indywidualnych oraz gotowych.',
+      image: '/images/photo-gallery-3.jpg',
+      direction: 'left'
+    },
+    {
+      title: 'Projektowanie i doradztwo',
+      description: 'Usługi architektoniczne i projektowe, optymalizacja przestrzeni i zgodność z wymaganiami technicznymi.',
+      image: '/images/photo-gallery-1.jpg',
+      direction: 'right'
+    },
+    {
+      title: 'Budowa domów energooszczędnych i pasywnych',
+      description: 'Budowa domów charakteryzujących się niskim zużyciem energii, w tym pompy ciepła, panele słoneczne.',
+      image: '/images/photo-gallery-5.jpg',
+      direction: 'left'
+    }]
 }
