@@ -295,21 +295,57 @@ h1.animated-text {
 
 #photo-2 {
   position: absolute;
-  max-width: 90%;
-  max-height: 90vh;
+  top: -140px;
+  right: 100px;
+}
+
+#photo-3 {
+  position: absolute;
+  max-width: 50%;
+  max-height: 60%;
+  transform: translateX(535px) translateY(-200px) rotate(115deg);
+  opacity: 0;
+  animation: fadeInPhoto 1s ease-out 1s forwards;
+}
+
+#photo-4 {
+  position: absolute;
+  max-width: 45%;
+  max-height: 45vh;
   top: 13.5px;
   right: 28px;
-  clip-path: inset(0 0 50% 0);
+  clip-path: ellipse(50% 50% at 50% 50%);
+}
+
+@keyframes fadeInPhoto {
+  from {
+    opacity: 0;
+    transform: translateX(535px) translateY(-200px) rotate(115deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(535px) translateY(-200px) rotate(115deg);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(115deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(115deg);
+  }
 }
 
 .about-container {
-  border-top: 4px solid #d6441f;
-  border-bottom: 4px solid #d6441f;
   position: relative;
   margin-bottom: 100px;
   margin-left: 50px;
   padding-top: 30px;
   padding-bottom: 30px;
+  overflow: hidden;
 }
 
 .overlay-image {
@@ -317,3 +353,4 @@ h1.animated-text {
   height: 100px;
   background-repeat: no-repeat;
 }
+

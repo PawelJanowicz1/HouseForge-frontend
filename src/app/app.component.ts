@@ -28,9 +28,13 @@ export class AppComponent {
       document.body.style.backgroundSize = 'cover';
       document.body.style.backgroundPosition = 'center';
     } else if( this.currentRoute === '/services'){
-      document.body.style.backgroundColor = '#d0e7f9';
+      document.body.style.backgroundImage = 'url("/images/white-paper3.jpg")';
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
     } else if( this.currentRoute === 'contact'){
-      document.body.style.backgroundColor = '#ffffff';
+      document.body.style.backgroundImage = 'url("/images/white-paper3.jpg")';
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
     }});
   }
 }
