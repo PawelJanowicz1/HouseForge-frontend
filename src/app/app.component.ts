@@ -20,8 +20,8 @@ export class AppComponent {
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        this.currentRoute = event.url;
-        this.showHeaderAndFooter = event.url !== '/about';
+        this.currentRoute = event.urlAfterRedirects;
+        this.showHeaderAndFooter = !['/about', '/services', '/contact'].includes(event.url);
       }
     });
   }
