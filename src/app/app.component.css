@@ -222,15 +222,15 @@ button {
 }
 
 .slide-in-left {
-  animation-delay: 0.5s;
+  animation-delay: 0s;
 }
 
 .slide-in-right {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 .slide-in-left:nth-of-type(3) {
-  animation-delay: 2.5s;
+  animation-delay: 2.0s;
 }
 
 @keyframes text-color-shift {
@@ -259,7 +259,7 @@ button {
   -webkit-background-clip: text;
   color: transparent;
   animation: slideInFromRight 1s ease-out forwards, text-color-shift 6s ease-in-out infinite;
-  animation-delay: 3.5s;
+  animation-delay: 3s;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 

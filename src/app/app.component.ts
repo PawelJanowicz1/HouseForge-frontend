@@ -23,6 +23,14 @@ export class AppComponent {
         this.currentRoute = event.urlAfterRedirects;
         this.showHeaderAndFooter = !['/about', '/services', '/contact'].includes(event.url);
       }
-    });
+    if( this.currentRoute === '/about'){
+      document.body.style.backgroundImage = 'url("/images/white-paper3.jpg")';
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
+    } else if( this.currentRoute === '/services'){
+      document.body.style.backgroundColor = '#d0e7f9';
+    } else if( this.currentRoute === 'contact'){
+      document.body.style.backgroundColor = '#ffffff';
+    }});
   }
 }

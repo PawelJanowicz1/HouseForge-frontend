@@ -179,11 +179,10 @@ button {
 .welcome-section {
   text-align: center;
   margin-top: 20px;
-  font-size: 20px;
 }
 
 .animated-text {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   color: #333;
   font-weight: bold;
   opacity: 0;
@@ -223,15 +222,15 @@ button {
 }
 
 .slide-in-left {
-  animation-delay: 0.5s;
+  animation-delay: 0s;
 }
 
 .slide-in-right {
-  animation-delay: 1.5s;
+  animation-delay: 0s;
 }
 
 .slide-in-left:nth-of-type(3) {
-  animation-delay: 2.5s;
+  animation-delay: 0s;
 }
 
 @keyframes text-color-shift {
@@ -269,7 +268,7 @@ button {
   margin-bottom: 20px;
 }
 
-.main-page-color{
+.main-page-color {
   color: #f16d49;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -283,7 +282,38 @@ h1.animated-text {
   color: inherit;
 }
 
-.photo-resize{
+.wrap {
+  width: 50%;
+}
+
+#photo-1 {
   width: 30em;
   height: 30em;
+  float: right;
+
+}
+
+#photo-2 {
+  position: absolute;
+  max-width: 90%;
+  max-height: 90vh;
+  top: 13.5px;
+  right: 28px;
+  clip-path: inset(0 0 50% 0);
+}
+
+.about-container {
+  border-top: 4px solid #d6441f;
+  border-bottom: 4px solid #d6441f;
+  position: relative;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.overlay-image {
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
 }
