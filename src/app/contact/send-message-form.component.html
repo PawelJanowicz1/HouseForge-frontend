@@ -1,29 +1,29 @@
 <h1>{{ title }}</h1>
 <form [formGroup]="messageForm" (ngSubmit)="onSubmit()" class="message-form">
   <mat-form-field appearance="outline" class="full-width">
-    <mat-label>Name</mat-label>
+    <mat-label>Imię</mat-label>
     <input matInput id="name" formControlName="name" />
-    <mat-error *ngIf="messageForm.get('name')?.invalid">Name is required</mat-error>
+    <mat-error *ngIf="messageForm.get('name')?.invalid">Imię jest wymagane</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="full-width">
-    <mat-label>Phone Number</mat-label>
-    <input matInput id="phoneNumber" formControlName="phoneNumber" />
-    <mat-error *ngIf="messageForm.get('phoneNumber')?.invalid">Phone number is required</mat-error>
+    <mat-label>Numer telefonu</mat-label>
+    <input matInput id="phoneNumber" formControlName="phoneNumber" placeholder="np. 123456789" />
+    <mat-error *ngIf="messageForm.get('phoneNumber')?.invalid">Numer telefonu jest wymagany</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="full-width">
     <mat-label>Email</mat-label>
     <input matInput type="email" id="email" formControlName="email" />
-    <mat-error *ngIf="messageForm.get('email')?.hasError('required')">Email is required</mat-error>
-    <mat-error *ngIf="messageForm.get('email')?.hasError('email')">Invalid email format</mat-error>
+    <mat-error *ngIf="messageForm.get('email')?.hasError('required')">Email jest wymagany</mat-error>
+    <mat-error *ngIf="messageForm.get('email')?.hasError('email')">Niewłaściwy format email</mat-error>
   </mat-form-field>
 
   <mat-form-field appearance="outline" class="full-width">
-    <mat-label>Message</mat-label>
+    <mat-label>Twoja wiadomość</mat-label>
     <textarea matInput id="message" formControlName="message"></textarea>
-    <mat-error *ngIf="messageForm.get('message')?.invalid">Message is required</mat-error>
+    <mat-error *ngIf="messageForm.get('message')?.invalid">Wiadomość jest wymagana</mat-error>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" type="submit" [disabled]="messageForm.invalid">Send</button>
+  <button mat-raised-button color="primary" type="submit" [disabled]="messageForm.invalid">Wyślij</button>
 </form>

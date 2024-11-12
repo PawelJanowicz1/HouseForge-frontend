@@ -1,9 +1,68 @@
 .message-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff5e5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.full-width {
+mat-label {
+  font-weight: bold;
+  color: #e63807;
+}
+
+mat-form-field {
   width: 100%;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  background-color: #fff8f2;
+  border: 1px solid #f16d49;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #e63807;
+  color: white;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #f16d49;
+}
+
+textarea {
+  resize: none;
+}
+
+mat-error {
+  color: #f44336;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #e63807;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.message-form {
+  animation: fadeIn 1s ease-in;
 }

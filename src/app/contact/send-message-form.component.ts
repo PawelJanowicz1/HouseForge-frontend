@@ -17,10 +17,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
   ],
   templateUrl: './send-message-form.component.html',
+  styleUrls: ['./send-message-form.component.css']
 })
 export class SendMessageFormComponent {
   messageForm: FormGroup;
-  title: string = 'Send Message';
+  title: string = 'Skontaktuj się z nami';
 
   constructor(private http: HttpClient) {
     this.messageForm = new FormGroup({
