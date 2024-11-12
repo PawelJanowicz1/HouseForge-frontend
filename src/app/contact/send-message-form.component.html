@@ -1,4 +1,4 @@
-<form [formGroup]="messageForm" (ngSubmit)="onSubmit()" class="message-form">
+<form *ngIf="!isSubmitted" [formGroup]="messageForm" (ngSubmit)="onSubmit()" class="message-form">
   <mat-form-field appearance="outline" class="full-width">
     <mat-label>Imię</mat-label>
     <input matInput id="name" formControlName="name" />
@@ -29,3 +29,7 @@
     <span *ngIf="isSubmitting">Wysyłanie...</span>
   </button>
 </form>
+
+<div *ngIf="isSubmitted" class="success-message">
+  <h2>Wiadomość została wysłana!</h2>
+</div>

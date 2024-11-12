@@ -23,8 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class SendMessageFormComponent {
   messageForm: FormGroup;
-  title: string = 'Skontaktuj się z nami i ustalmy szczegóły';
   isSubmitting = false;
+  isSubmitted = false;
 
   constructor(private http: HttpClient) {
     this.messageForm = new FormGroup({
@@ -46,16 +46,15 @@ export class SendMessageFormComponent {
       this.isSubmitting = true;
       const formData = this.messageForm.value;
 
-      this.http.post('http://localhost:8086/send-message', formData)
+      this.http.post('http://localhost:8086/send-message', formData, { responseType: 'text' })
         .subscribe(response => {
-          console.log('Message sent', response);
           this.isSubmitting = false;
+          this.isSubmitted = true;
+          console.log(response);
         }, error => {
-          console.error('Error sending message', error);
           this.isSubmitting = false;
+          console.error('Error sending message', error);
         });
-    } else {
-      console.log('Form is invalid');
     }
   }
 }
