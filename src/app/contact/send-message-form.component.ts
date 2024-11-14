@@ -25,6 +25,7 @@ export class SendMessageFormComponent {
   messageForm: FormGroup;
   isSubmitting = false;
   isSubmitted = false;
+  contactUs: string = 'Skontaktuj się z nami i omówimy szczegóły';
 
   constructor(private http: HttpClient) {
     this.messageForm = new FormGroup({
@@ -46,7 +47,7 @@ export class SendMessageFormComponent {
       this.isSubmitting = true;
       const formData = this.messageForm.value;
 
-      this.http.post('http://localhost:8086/send-message', formData, { responseType: 'text' })
+      this.http.post('https://budowa-domow-trojmiasto.pl/send-message', formData, { responseType: 'text' })
         .subscribe(response => {
           this.isSubmitting = false;
           this.isSubmitted = true;

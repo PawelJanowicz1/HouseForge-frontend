@@ -1,3 +1,7 @@
+<h1 class="main-page-color animated-text"
+    [ngStyle]="{'color': '#e63807', 'font-size': '40px', 'text-shadow': '2px 2px 5px rgba(0, 0, 0, 0.3)', 'font-weight': 'bold'}">
+  {{ contactUs }}
+</h1>
 <form *ngIf="!isSubmitted" [formGroup]="messageForm" (ngSubmit)="onSubmit()" class="message-form">
   <mat-form-field appearance="outline" class="full-width">
     <mat-label>Imię</mat-label>
