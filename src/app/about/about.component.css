@@ -354,3 +354,31 @@ h1.animated-text {
   background-repeat: no-repeat;
 }
 
+.arrow {
+  position: absolute;
+  max-width: 50%;
+  transform: rotate(115deg);
+  animation: fadeInPhoto 1s ease-out 1s forwards;
+}
+
+@media (min-width: 1024px) {
+  .arrow {
+    top: -50px;
+    left: 250px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .arrow {
+    top: -40px;
+    left: 180px;
+  }
+}
+
+@media (max-width: 767px) {
+  .arrow {
+    top: -30px;
+    left: 100px;
+    max-width: 40%;
+  }
+}

@@ -125,10 +125,11 @@ button {
 
 .header, .footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   z-index: 1;
   background-color: transparent;
   box-shadow: none;
+  align-items: center;
 }
 
 .logo img {
@@ -162,6 +163,8 @@ button {
 .title {
   font-size: 4rem;
   font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 0px;
   background: linear-gradient(to right, #f6967b, #cf4949);
   -webkit-background-clip: text;
   color: transparent;
@@ -169,9 +172,10 @@ button {
 }
 
 .title mat-icon {
-  padding-right: 53px;
-  padding-bottom: 57px;
-  font-size: 80px;
+  padding-right: 71px;
+  padding-bottom: 66px;
+  margin-left: 6px;
+  font-size: 66px;
   background: linear-gradient(to right, #f6a28a, #ef4f26);
   -webkit-background-clip: text;
 }
@@ -280,4 +284,5 @@ h1.animated-text {
 .no-link-style {
   text-decoration: none;
   color: inherit;
+  display: flex;
 }
