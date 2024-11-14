@@ -203,6 +203,16 @@ button {
   animation: slideInFromRight 1s ease-out forwards;
 }
 
+.slide-in-left-2 {
+  transform: translateX(-100%);
+  animation: slideInFromLeft-2 1s ease-out forwards;
+}
+
+.slide-in-right-2 {
+  transform: translateX(100%);
+  animation: slideInFromRight-2 1s ease-out forwards;
+}
+
 @keyframes slideInFromLeft {
   from {
     opacity: 0;
@@ -215,6 +225,28 @@ button {
 }
 
 @keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft-2 {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight-2 {
   from {
     opacity: 0;
     transform: translateX(100%);
@@ -285,4 +317,37 @@ h1.animated-text {
   text-decoration: none;
   color: inherit;
   display: flex;
+}
+
+.footer {
+  background-color: transparent;
+  padding: 20px 0;
+  box-shadow: none;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.footer-link {
+  color: #e63807;
+  text-decoration: none;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-phone, .footer-email {
+  color: #e63807;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-decoration: none;
 }
