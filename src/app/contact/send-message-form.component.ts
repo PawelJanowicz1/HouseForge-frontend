@@ -46,8 +46,7 @@ export class SendMessageFormComponent {
     if (this.messageForm.valid) {
       this.isSubmitting = true;
       const formData = this.messageForm.value;
-
-      this.http.post('https://budowa-domow-trojmiasto.pl/send-message', formData, { responseType: 'text' })
+      this.http.post('http://localhost:8086/send-message', formData)
         .subscribe(response => {
           this.isSubmitting = false;
           this.isSubmitted = true;
