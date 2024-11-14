@@ -323,11 +323,12 @@ h1.animated-text {
   background-color: transparent;
   padding: 20px 0;
   box-shadow: none;
+  margin-top: 50px;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   font-size: 1.5rem;
 }
@@ -338,6 +339,7 @@ h1.animated-text {
   font-size: 30px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .footer-link:hover {
