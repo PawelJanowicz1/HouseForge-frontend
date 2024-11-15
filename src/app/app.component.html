@@ -1,0 +1,35 @@
+<router-outlet xmlns="http://www.w3.org/1999/html"></router-outlet>
+
+<video *ngIf="currentRoute === '/'" autoplay loop muted id="background-video">
+  <source src="/videos/background-video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+<header class="header">
+  <h1 class="title">
+    <a routerLink="/" class="no-link-style">
+      <mat-icon>house</mat-icon>
+      <span>HOUSE FORGE</span>
+    </a>
+  </h1>
+  <app-navbar [currentRoute]="currentRoute" class="navbar"></app-navbar>
+</header>
+
+<main>
+  <section *ngIf="currentRoute !== '/about' && currentRoute !== '/contact' && currentRoute !== '/services'"
+           class="welcome-section">
+    <h2 class="main-page-color animated-text slide-in-left">Budujemy domy</h2>
+    <h2 class="main-page-color animated-text slide-in-right">dla naszych klientów</h2>
+    <h2 class="main-page-color animated-text slide-in-left">na terenie całego</h2>
+    <h1 class="animated-text slide-in-right highlighted-word">TRÓJMIASTA</h1>
+  </section>
+  <router-outlet></router-outlet>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-content">
+    <a href="tel:+48123456789" class="footer-link slide-in-left-2">📞 +48 662 470 965</a>
+    <a href="mailto:budujemydomy&#64;trojmiasto.pl" class="footer-link slide-in-right-2">✉️ budujemydomytrojmiasto&#64;gmail.com</a>
+  </div>
+</footer>
