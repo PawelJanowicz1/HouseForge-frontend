@@ -314,7 +314,7 @@ button {
   }
 }
 
- 
+
 @keyframes slideInFromLeft-2 {
   from {
     opacity: 0;
@@ -325,7 +325,7 @@ button {
     transform: translateX(0);
   }
 }
- 
+
 @keyframes slideInFromRight-2 {
   from {
     opacity: 0;
