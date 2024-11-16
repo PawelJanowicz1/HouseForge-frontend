@@ -190,10 +190,10 @@ button[type="submit"] {
 @keyframes fadeInArrow {
   from {
     opacity: 0;
-    transform: translateY(20px) rotate(45deg);
+    transform: translateY(20px) rotate(120deg);
   }
   to {
     opacity: 1;
-    transform: translateY(0) rotate(45deg);
+    transform: translateY(0) rotate(120deg);
   }
 }

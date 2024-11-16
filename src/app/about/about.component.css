@@ -44,31 +44,41 @@ body {
   width: 220px;
   height: 220px;
   border: 6px solid #f16d49;
-  border-radius: 50%; /* Circle frame */
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Ensures the image stays within the circular frame */
+  overflow: hidden;
 }
 
 .photo-resize {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the circle area */
+  object-fit: cover;
   border-radius: 50%;
 }
 
 .arrow {
   position: absolute;
   width: 80px;
-  transform: rotate(120deg);
+  transform: rotate(100deg);
   top: 50%;
-  left: -70px; /* Initial position for small screens */
+  left: -70px;
   opacity: 0;
-  animation: fadeInPhoto 1s ease-out 1s forwards;
+  animation: fadeInArrow 1.5s forwards;
 }
 
-/* Medium screens (tablets) */
+@keyframes fadeInArrow {
+  from {
+    opacity: 0;
+    transform: translateY(20px) rotate(120deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(120deg);
+  }
+}
+
 @media (min-width: 768px) {
   .about-container {
     flex-direction: row;
@@ -91,7 +101,6 @@ body {
     width: 100px;
     left: -30px;
     opacity: 1;
-    animation: none;
   }
 }
 
@@ -173,17 +182,6 @@ body {
   .image-frame{
     height: 300px;
     width: 300px;
-  }
-}
-
-@keyframes fadeInPhoto {
-  from {
-    opacity: 0;
-    transform: translateY(-20px) rotate(30deg);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) rotate(30deg);
   }
 }
 
