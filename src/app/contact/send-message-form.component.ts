@@ -29,16 +29,25 @@ export class SendMessageFormComponent {
 
   constructor(private http: HttpClient) {
     this.messageForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+      name: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(12),
+        Validators.pattern(/^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
+      ]),
       phoneNumber: new FormControl('', [
         Validators.required,
         Validators.pattern(/^(?:\+48\s?\d{3}\s?\d{3}\s?\d{3}|\+48\d{9}|\d{9}|\d{3}\s?\d{3}\s?\d{3})$/)
       ]),
       email: new FormControl('', [
         Validators.required,
-        Validators.email
+        Validators.email,
+        Validators.maxLength(25)
       ]),
-      message: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      message: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(500),
+        Validators.pattern(/^[\w\s.,;:'"-]+$/)
+      ]),
     });
   }
 
@@ -56,5 +65,21 @@ export class SendMessageFormComponent {
           console.error('Error sending message', error);
         });
     }
+  }
+
+  get name() {
+    return this.messageForm.get('name');
+  }
+
+  get phoneNumber() {
+    return this.messageForm.get('phoneNumber');
+  }
+
+  get email() {
+    return this.messageForm.get('email');
+  }
+
+  get message() {
+    return this.messageForm.get('message');
   }
 }
