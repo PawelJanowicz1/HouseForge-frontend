@@ -32,7 +32,6 @@ export class SendMessageFormComponent {
       name: new FormControl('', [
         Validators.required,
         Validators.maxLength(12),
-        // Zezwalamy tylko na litery (w tym polskie znaki) i spacje
         Validators.pattern(/^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ ]+$/)
       ]),
       phoneNumber: new FormControl('', [
