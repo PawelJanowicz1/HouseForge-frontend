@@ -225,6 +225,7 @@ button {
 
 .welcome-section {
   text-align: center;
+  margin: 0 20px;
   margin-top: 20px;
 }
 
@@ -349,6 +350,11 @@ button {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+@media(max-width: 500px) {
+  .highlighted-word {
+    font-size: 3.5rem;
+  }
+}
 
 .welcome-section h2:last-child {
   margin-bottom: 20px;
@@ -380,8 +386,17 @@ h1.animated-text {
   }
 }
 
-@media(max-width: 560px) {
-  .title {
-    display: none;
+@media(max-width: 700px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+  .title a span {
+    display: flex;
+    font-size: 36px;
+  }
+  .title mat-icon {
+    margin: 0px;
   }
 }
