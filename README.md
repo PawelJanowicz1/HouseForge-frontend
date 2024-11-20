@@ -26,4 +26,3 @@ Services      |  Services mobile
 Contact us      |  Contact us mobile
 :------------------------:|:-------------------------:
 ![Contact us](public/images/screenshots/contact.png)  |  ![Contact us mobile](public/images/screenshots/contact-mobile.PNG)
-d
