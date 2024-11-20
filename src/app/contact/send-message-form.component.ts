@@ -52,10 +52,11 @@ export class SendMessageFormComponent {
   }
 
   onSubmit() {
+    console.log('Metoda onSubmit została wywołana');
     if (this.messageForm.valid) {
       this.isSubmitting = true;
       const formData = this.messageForm.value;
-      this.http.post('https://budowa-domow-trojmiasto.pl/api/send-message', formData)
+      this.http.post('https://budowa-domow-trojmiasto.pl/api/send-message', formData, { responseType: 'text' })
         .subscribe(response => {
           this.isSubmitting = false;
           this.isSubmitted = true;

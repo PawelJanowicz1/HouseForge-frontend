@@ -35,7 +35,7 @@
     </button>
   </form>
 
-  <img src="/images/arrow.png" alt="Arrow Icon" class="arrow-bottom">
+  <img *ngIf="!isSubmitted" src="/images/arrow.png" alt="Arrow Icon" class="arrow-bottom">
 
   <div *ngIf="isSubmitted" class="success-message">
     <h2>Wiadomość została wysłana! Skontaktujemy się z tobą w jak najkrótszym czasie.</h2>
