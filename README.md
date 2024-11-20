@@ -1,27 +1,30 @@
-# HouseForgeFrontend
+## :bookmark_tabs: About This Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+This website, built using Angular, has been created for clients looking for professionals to build their dream homes in the Tricity area. The platform allows users to explore services, check offers, and contact the company through a modern, responsive interface. Customers can reach out via the contact form for inquiries or detailed information. You can visit this site at [https://budowa-domow-trojmiasto.pl](https://budowa-domow-trojmiasto.pl).
 
-## Development server
+This repository contains the **frontend section** of the project, built using Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## :hammer_and_wrench: Used Technologies
 
-## Code scaffolding
+* Angular
+* HTML, CSS
+* TypeScript
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## :camera: Screenshots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Landing page      |  Landing page mobile
+:------------------------:|:-------------------------:
+![Landing page](public/images/screenshots/landing-page.png)  |  ![Landing page mobile](public/images/screenshots/landing-page-mobile.PNG)
 
-## Running unit tests
+About us      |  About us mobile
+:------------------------:|:-------------------------:
+![About us](public/images/screenshots/about.png)  |  ![About us mobile](public/images/screenshots/about-mobile.PNG)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Services      |  Services mobile
+:------------------------:|:-------------------------:
+![Services](public/images/screenshots/services.png)  |  ![Services mobile](public/images/screenshots/services-mobile.PNG)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Contact us      |  Contact us mobile
+:------------------------:|:-------------------------:
+![Contact us](public/images/screenshots/contact.png)  |  ![Contact us mobile](public/images/screenshots/contact-mobile.PNG)
