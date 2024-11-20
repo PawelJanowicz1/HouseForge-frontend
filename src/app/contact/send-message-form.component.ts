@@ -32,7 +32,7 @@ export class SendMessageFormComponent {
       name: new FormControl('', [
         Validators.required,
         Validators.maxLength(12),
-        Validators.pattern(/^[\w\s.,;:'"\-ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
+        Validators.pattern(/^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
       ]),
       phoneNumber: new FormControl('', [
         Validators.required,
@@ -46,7 +46,7 @@ export class SendMessageFormComponent {
       message: new FormControl('', [
         Validators.required,
         Validators.maxLength(500),
-        Validators.pattern(/^[\w\s.,;:'"-]+$/)
+        Validators.pattern(/^[\w\s.,;:'"\-ąćęłńóśźżĄĆĘŁŃÓŚŹŻ]+$/)
       ]),
     });
   }
