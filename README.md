@@ -7,8 +7,8 @@ This repository contains the **frontend section** of the project, built using An
 ## :hammer_and_wrench: Used Technologies
 
 * Angular
-* HTML, CSS
 * TypeScript
+* HTML, CSS
 
 
 ## :camera: Screenshots
